@@ -1,74 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Executor GUI for Roblox</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-        }
-        #editor {
-            width: 80%;
-            height: 200px;
-            margin: 20px auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            overflow-y: scroll;
-        }
-        #console {
-            width: 80%;
-            height: 200px;
-            margin: 10px auto;
-            border: 1px solid #ccc;
-            padding: 10px;
-            overflow-y: scroll;
-        }
-        button {
-            padding: 10px 20px;
-            margin: 10px;
-            cursor: pointer;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cat Hub</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div id="editor" contenteditable="true">-- Enter Lua script here...</div>
-    <button onclick="executeScript()">Execute</button>
-    <button onclick="clearConsole()">Clear</button>
+  <div class="container">
+    <h1>Cat Hub</h1>
+    <button id="execute-btn">Execute Work</button>
+    <button id="clear-btn">Clear Work</button>
     <div id="console"></div>
-
-    <script>
-        function executeScript() {
-            var script = document.getElementById('editor').innerText.trim();
-            try {
-                var result = runLuaScript(script);
-                addToConsole(result);
-            } catch (error) {
-                addToConsole('Error: ' + error.message);
-            }
-        }
-
-        function clearConsole() {
-            document.getElementById('console').innerText = '';
-        }
-
-        function addToConsole(output) {
-            var consoleDiv = document.getElementById('console');
-            consoleDiv.innerText += output + '\n';
-            consoleDiv.scrollTop = consoleDiv.scrollHeight;
-        }
-
-        // Function to execute Lua script on Roblox
-        function runLuaScript(script) {
-            // Assuming you have a Roblox script executor
-            // This is just a placeholder, replace it with your actual executor code
-            // You might need to use Roblox's API to run Lua scripts on a Roblox game
-            // For example:
-            // game:GetService('RunService'):Eval(script)
-            return "Roblox Lua script executed: " + script;
-        }
-    </script>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
