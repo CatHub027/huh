@@ -1,20 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Title Cat Hub Executor</title>
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Executor GUI</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <h1>Cat Hub Executor</h1>
-    <textarea id="code" placeholder="Enter Lua code here..."></textarea>
-    <div class="buttons">
-      <button onclick="execute()">Execute</button>
-      <button onclick="clearCode()">Clear</button>
-    </div>
-  </div>
-  <script src="executor.lua"></script>
+<div class="executor-gui">
+  <textarea id="code-input" placeholder="Enter your code here..."></textarea>
+  <button id="execute-btn">Execute</button>
+  <button id="clear-btn">Clear</button>
+  <div id="output"></div>
+</div>
+<script src="script.js"></script>
 </body>
 </html>
