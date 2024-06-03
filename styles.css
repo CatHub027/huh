@@ -1,0 +1,30 @@
+.container {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+#execute-btn {
+  background-color: green;
+  color: white;
+}
+
+#clear-btn {
+  background-color: red;
+  color: white;
+}
+
+#console {
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin-top: 20px;
+  min-height: 100px;
+  overflow-y: auto;
+}
