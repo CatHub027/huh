@@ -2,6 +2,17 @@
   text-align: center;
 }
 
+.editor {
+  margin-bottom: 20px;
+}
+
+#script-editor {
+  width: 80%;
+  height: 150px;
+  padding: 10px;
+  font-family: monospace;
+}
+
 button {
   padding: 10px 20px;
   margin: 10px;
