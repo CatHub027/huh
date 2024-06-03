@@ -3,20 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ScriptWare V3 Executor</title>
+  <title>ScriptWare V3 Script Editor</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div id="window" class="window">
-    <div class="tab">Canvas</div>
-    <div class="section">Drawing</div>
+  <div id="editor" class="editor">
+    <textarea id="codeInput" class="code-input" placeholder="Enter Lua code here..."></textarea>
     <button id="executeBtn" class="button">Execute</button>
-    <button id="clearBtn" class="button">Clear</button>
-    <button id="saveBtn" class="button">Save</button>
-    <input type="color" id="colorPicker" class="color-picker">
-    <!-- Add other Canvas elements here -->
+    <div id="output" class="output"></div>
   </div>
-  <!-- Add other tabs and elements here -->
   <script src="scripts.js"></script>
 </body>
 </html>
