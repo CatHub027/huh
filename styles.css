@@ -1,41 +1,9 @@
-.container {
-  text-align: center;
-}
+document.getElementById('execute-btn').addEventListener('click', function() {
+  var script = document.getElementById('script-editor').value;
+  console.log(script);
+  eval(script);
+});
 
-.editor {
-  margin-bottom: 20px;
-}
-
-#script-editor {
-  width: 80%;
-  height: 150px;
-  padding: 10px;
-  font-family: monospace;
-}
-
-button {
-  padding: 10px 20px;
-  margin: 10px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  font-size: 16px;
-}
-
-#execute-btn {
-  background-color: green;
-  color: white;
-}
-
-#clear-btn {
-  background-color: red;
-  color: white;
-}
-
-#console {
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin-top: 20px;
-  min-height: 100px;
-  overflow-y: auto;
-}
+document.getElementById('clear-btn').addEventListener('click', function() {
+  document.getElementById('console').innerHTML = '';
+});
