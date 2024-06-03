@@ -1,18 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lua Script Editor</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ScriptWare V3 Executor</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<div class="editor">
-  <textarea id="code-editor" placeholder="Write your Lua script here..."></textarea>
-  <button id="run-button">Run</button>
-  <button id="clear-button">Clear</button>
-  <div id="output"></div>
-</div>
-<script src="script.js"></script>
+  <div id="window" class="window">
+    <div class="tab">Canvas</div>
+    <div class="section">Drawing</div>
+    <button id="executeBtn" class="button">Execute</button>
+    <button id="clearBtn" class="button">Clear</button>
+    <button id="saveBtn" class="button">Save</button>
+    <input type="color" id="colorPicker" class="color-picker">
+    <!-- Add other Canvas elements here -->
+  </div>
+  <!-- Add other tabs and elements here -->
+  <script src="scripts.js"></script>
 </body>
 </html>
