@@ -1,21 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cat Hub</title>
-  <link rel="stylesheet" href="styles.css">
+<title>Cat Hub Executor | Script-Ware IOS</title>
+<style>
+  body {
+  font-family: Arial, sans-serif;
+}
+
+#executor-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#script-editor-container {
+  margin-bottom: 15px;
+}
+
+#script-editor {
+  width: 95%;
+  height: 250px;
+  padding: 10px;
+  font-size: 14px;
+  font-family: monospace;
+  border: 1px solid #ccc;
+}
+
+#button-container {
+  margin-bottom: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3e8e41;
+}
+
+#output-container {
+  padding: 20px;
+  border-top: 1px solid #ccc;
+}
+
+#output {
+  font-size: 14px;
+  font-family: monospace;
+}
+</style>
 </head>
 <body>
-  <div class="container">
-    <h1>Cat Hub</h1>
-    <div class="editor">
-      <textarea id="script-editor" placeholder="Write your Lua script here..."></textarea>
-    </div>
-    <button id="execute-btn">Execute Work</button>
-    <button id="clear-btn">Clear Work</button>
-    <div id="console"></div>
+<div id="executor-container">
+  <h1>Cat Hub Executor</h1>
+  <div id="script-editor-container">
+    <textarea id="script-editor" cols="50" rows="10"></textarea>
   </div>
-  <script src="script.js"></script>
+  <div id="button-container">
+    <button id="execute-button">Execute</button>
+    <button id="clear-button">Clear</button>
+    <button id="save-button">Save</button>
+  </div>
+  <div id="output-container">
+    <p id="output"></p>
+  </div>
+</div>
+
+<script>
+  let scriptEditor = document.getElementById('script-editor');
+let executeButton = document.getElementById('execute-button');
+let clearButton = document.getElementById('clear-button');
+let saveButton = document.getElementById('save-button');
+let outputElement = document.getElementById('output');
+
+executeButton.addEventListener('click', () => {
+  let script = scriptEditor.value;
+  try {
+    let lua = new Lua(); // assuming you have a Lua interpreter library
+let result = lua.execute(script);
+    outputElement.textContent = `Output: ${result}`;
+  } catch (error) {
+    outputElement.textContent = `Error: ${error.message}`;
+  }
+});
+
+clearButton.addEventListener('click', () => {
+  scriptEditor.value = '';
+  outputElement.textContent = '';
+});
+
+saveButton.addEventListener('click', () => {
+  let script = scriptEditor.value;
+  // save the script to a file or database
+  console.log(`Script saved: ${script}`);
+});
+
+scriptEditor.value = `Welcome to Cat Hub Executor you here code lua!`;
+</script>
 </body>
 </html>
