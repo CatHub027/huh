@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cat Hub Menu Mod</title>
+    <style>
+        body {
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0;
+}
+
+.menu-container {
+  max-width: 400px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 12px;
+  color: #666;
+}
+    </style>
+</head>
+<body>
+    <div class="menu-container">
+        <h1>Cat Hub Menu Mod</h1>
+        <ul>
+            <li>
+                <input type="checkbox" id="noclip" />
+                <label for="noclip">Noclip</label>
+            </li>
+            <li>
+                <input type="range" id="jumppower" min="1" max="500" value="50" />
+                <label for="jumppower">Jump Power</label>
+            </li>
+            <li>
+                <input type="range" id="walkspeed" min="1" max="200" value="50" />
+                <label for="walkspeed">Walk Speed</label>
+            </li>
+        </ul>
+        <p>Credit: Made By: Memecat0</p>
+    </div>
+
+    <script>
+        // Get the elements
+const noclipCheckbox = document.getElementById('noclip');
+const jumppowerRange = document.getElementById('jumppower');
+const walkspeedRange = document.getElementById('walkspeed');
+
+// Add event listeners
+noclipCheckbox.addEventListener('change', () => {
+    // Toggle noclip on/off
+    if (noclipCheckbox.checked) {
+        // Enable noclip
+        console.log('Noclip enabled');
+    } else {
+        // Disable noclip
+        console.log('Noclip disabled');
+    }
+});
+
+jumppowerRange.addEventListener('input', () => {
+    // Set jump power
+    console.log(`Jump power set to ${jumppowerRange.value}`);
+});
+
+walkspeedRange.addEventListener('input', () => {
+    // Set walk speed
+    console.log(`Walk speed set to ${walkspeedRange.value}`);
+});
+
+// Initialize the mod
+console.log('Cat Hub Menu Mod initialized');
+    </script>
+</body>
+</html>
