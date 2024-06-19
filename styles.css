@@ -1,9 +1,0 @@
-document.getElementById('execute-btn').addEventListener('click', function() {
-  var script = document.getElementById('script-editor').value;
-  console.log(script);
-  eval(script);
-});
-
-document.getElementById('clear-btn').addEventListener('click', function() {
-  document.getElementById('console').innerHTML = '';
-});
