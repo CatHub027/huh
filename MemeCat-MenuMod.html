@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Roblox Mod Menu</title>
+<style>
+#mod-menu {
+  text-align: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 300px;
+  margin: 40px auto;
+}
+
+#mod-menu h2 {
+  margin-top: 10px;
+}
+
+#mod-menu input[type="number"] {
+  width: 50px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+#mod-menu button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #fff;
+  cursor: pointer;
+}
+
+#mod-menu button:hover {
+  background-color: #3e8e41;
+}
+</style>
+</head>
+<body>
+<h1>Roblox Mod Menu</h1>
+<div id="mod-menu">
+  <h2>Jump Power</h2>
+  <input type="number" id="jump-power" value="50">
+  <button id="apply-jump-power">Apply</button>
+  
+  <h2>Walk Speed</h2>
+  <input type="number" id="walk-speed" value="16">
+  <button id="apply-walk-speed">Apply</button>
+  
+  <h2>Noclip</h2>
+  <button id="toggle-noclip">Toggle</button>
+</div>
+<script>
+  // script.js
+const jumpPowerInput = document.getElementById("jump-power");
+const applyJumpPowerButton = document.getElementById("apply-jump-power");
+const walkSpeedInput = document.getElementById("walk-speed");
+const applyWalkSpeedButton = document.getElementById("apply-walk-speed");
+const toggleNoclipButton = document.getElementById("toggle-noclip");
+
+applyJumpPowerButton.addEventListener("click", () => {
+  const jumpPowerValue = jumpPowerInput.value;
+  alert(`Jump Power set to ${jumpPowerValue}!`);
+  // Add logic to apply jump power to Roblox workspace
+});
+
+applyWalkSpeedButton.addEventListener("click", () => {
+  const walkSpeedValue = walkSpeedInput.value;
+  alert(`Walk Speed set to ${walkSpeedValue}!`);
+  // Add logic to apply walk speed to Roblox workspace
+});
+toggleNoclipButton.addEventListener("click", () => {
+  alert("Noclip toggled!");
+  // Add logic to toggle noclip in Roblox workspace
+});
+</script>
+</body>
+</html>
