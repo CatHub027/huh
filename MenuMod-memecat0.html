@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Mod Menu by memecat0</title>
+<style>
+.container {
+max-width: 400px;
+margin: 40px auto;
+text-align: center;
+}
+
+.credits {
+margin-bottom: 20px;
+}
+
+.mod-menu {
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+button {
+margin: 10px;
+}
+
+.jumppower-input,.walkspeed-input,.noclip-toggle {
+margin-top: 20px;
+}
+</style>
+</head>
+<body>
+<div class="container">
+<h1>Mod Menu memecat0</h1>
+<div class="credits">
+<p>Made By: memecat0 Tweaked By: BaconScripts</p>
+</div>
+<div class="mod-menu">
+<button id="jumppower-btn">Jumppower</button>
+<div class="jumppower-input">
+<label for="jumppower-input">Jumppower:</label>
+<input type="number" id="jumppower-input" value="50" />
+</div>
+<button id="walkspeed-btn">Walkspeed</button>
+<div class="walkspeed-input">
+<label for="walkspeed-input">Walkspeed:</label>
+<input type="number" id="walkspeed-input" value="16" />
+</div>
+<button id="noclip-btn">Noclip</button>
+<div class="noclip-toggle">
+<label for="noclip-toggle">Noclip:</label>
+<input type="checkbox" id="noclip-toggle" />
+</div>
+</div>
+<script>
+const jumppowerBtn = document.getElementById('jumppower-btn');
+const jumppowerInput = document.getElementById('jumppower-input');
+const walkspeedBtn = document.getElementById('walkspeed-btn');
+const walkspeedInput = document.getElementById('walkspeed-input');
+const noclipBtn = document.getElementById('noclip-btn');
+const noclipToggle = document.getElementById('noclip-toggle');
+
+// ROBLOX Workspace
+const workspace = game.GetService("Workspace");
+
+jumppowerBtn.addEventListener('click', () => {
+const jumppowerValue = parseInt(jumppowerInput.value);
+print(`Setting Jumppower to ${jumppowerValue}`);
+workspace.Character.Humanoid.JumpPower = jumppowerValue;
+alert(`Jumppower set to ${jumppowerValue}`);
+});
+
+walkspeedBtn.addEventListener('click', () => {
+const walkspeedValue = parseInt(walkspeedInput.value);
+print(`Setting Walkspeed to ${walkspeedValue}`);
+[]
+workspace.Character.Humanoid.WalkSpeed = walkspeedValue;
+alert(`Walkspeed set to ${walkspeedValue}`);
+});
+
+noclipBtn.addEventListener('click', () => {
+if (noclipToggle.checked) {
+print("Noclip enabled");
+workspace.Character.Humanoid.NoClip = true;
+alert("Noclip enabled");
+} else {
+print("Noclip disabled");
+workspace.Character.Humanoid.NoClip = false;
+alert("Noclip disabled");
+}
+});
+</script>
+</body>
+</html>
